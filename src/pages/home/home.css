@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
+    background: #88ABFF;
+}
+
+.wrapper{
+    margin: 50px;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fill,240px);
+}
+
+.wrapper li{
+    height: 250px;
+    list-style: none;
+    background-color: white;
+    border-radius: 5px;
+    padding: 15px 20px 20px;
+}
+
+/* add box */
+
+.add-box, .icon{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    cursor: pointer;
+
+}
+
+.add-box .icon{
+    height: 78px;
+    width: 78px;
+    color: #88ABFF;
+    font-size: 40px;
+    border-radius: 50%;
+    border: 2px dashed #88ABFF;
+}
+
+.add-box p{
+    color: #88ABFF;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.wrapper .logOut{
+    position: absolute;
+    top:10px;
+}
+
+
+@media only screen and (max-width:1105px){
+.wrapper{
+    grid-template-columns: repeat(auto-fill,200px);
+
+}
+}
+
+@media only screen and (max-width:947px){
+    .wrapper{
+        grid-template-columns: repeat(auto-fill,240px);
+        gap:20px;
+    
+    }
+    }
+
+    @media only screen and (max-width:860px){
+        .wrapper{
+            grid-template-columns: repeat(auto-fill,220px);
+            gap:15px;
+        
+        }
+        }    

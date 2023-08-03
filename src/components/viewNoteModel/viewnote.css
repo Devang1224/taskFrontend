@@ -1,0 +1,108 @@
+
+.viewnotemodal{
+
+    width: 400px;
+    background-color:white;
+    border-radius: 5px;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    outline:none;
+    border:none;
+    
+}
+
+
+.viewnotemodal header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 25px;
+    border-bottom: 1px solid #ccc;
+
+}
+
+.viewnotemodal header p{
+
+    font-size: 20px;
+    font-weight: 500;
+   
+}
+
+.viewnotemodal header i{
+
+    color: #8b8989;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+
+.detailsContainer{
+width: 100%;
+height: 40vh;
+padding: 10px;
+overflow-y: auto;
+
+}
+
+.detailsContainer::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+
+.detailsContainer .description{
+border-top:1px solid rgba(0, 0, 0, 0.288);
+padding-top:15px;
+
+}
+
+.detailsContainer .description p{
+    
+   word-wrap: break-word;
+   margin-top: 15px;
+   
+}
+
+.detailsContainer .description label{ 
+    font-size: 20px;
+   font-weight: 500;
+    
+}
+
+.detailsContainer .title{
+ margin-bottom:20px;
+
+
+}
+
+.detailsContainer .title label{
+    display:block;
+    font-size: 18px;
+    margin-bottom: 6px;
+    font-size: 20px;
+   font-weight: 500;
+
+    
+}
+
+.detailsContainer .title p{
+    width: 100%;
+    word-wrap: break-word;
+    font-size: 16px;
+    font-weight: 400;
+
+}
+
+.viewnotemodal .closeModal{
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width:595px){
+
+    .viewnotemodal{
+        width: 300px;
+    }
+
+}
