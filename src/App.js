@@ -12,20 +12,28 @@ function App() {
 
   const {userId} = useContext(taskContext);
   
+  const ProtectedRoute = ({ children }) => {
+    if (!userId || typeof userId === "undefined") {
+      return <Navigate to="login" />;
+    }
+    return children;
+  };
+
+
   return (
   
     <div className="App" >
     <BrowserRouter>
       <Routes>
-        {userId ? (
-          <Route index element={<Home />} />
-        ) : (
-          <>
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Signin />} />
-          </>
-        )}
-        <Route path="*" element={<ErrorPage/>}/> 
+        <Route path="/">
+        <Route index element={
+            <ProtectedRoute>
+                <Home />
+            </ProtectedRoute>} />
+            <Route path="login" element={<Login />} />
+            <Route path="register" element={<Signin />} />
+            <Route path="*" element={<ErrorPage/>}/> 
+        </Route>
       </Routes>
     </BrowserRouter>
   </div>
